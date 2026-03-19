@@ -1,2 +1,2 @@
 Name: Alson
-GitHub URL: https://github.com/alsonchuang5in-creator
+GitHub: https://github.com/alsonchuang5in-creator
