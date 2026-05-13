@@ -5,20 +5,17 @@
 body {
     padding: 20px;
     background-color: black;
-    color: black;
-    background-image: url(../images/red2.jpg);
+    color: white;
 }
 
 .light-mode {
-    background-color: azure;
+    background-color: white;
     color: black;
-    background-image: url(../images/blue2.jpg);
 }
 
 .center {
     width: 940px;
     padding: 20px;
-    border: 1px dotted white;
     margin-left: auto;
     margin-right: auto;
 }
@@ -41,4 +38,34 @@ footer {
 
 .font {
     font-family: "Sekuya", system-ui;
+}
+
+.big {
+    font-size: 48px;
+}
+
+.underline {
+    display: flex;
+    gap: 10px;
+    justify-content: right;
+    border-bottom: 1px solid white;
+    margin-bottom: 0;
+    padding: 0px;
+}
+
+.light-mode .underline{
+    border-color: black;
+}
+
+.light-mode .tab{
+    border-color: black;
+}
+
+.tab {
+    display: inline-block;
+    border: 1px solid white;
+    border-bottom: none;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
