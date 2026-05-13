@@ -37,16 +37,14 @@ body {
 }
 
 header {
+  background-image: linear-gradient(
+    0deg,
+    rgb(255 255 255 / 0.07) 0%,
+    var(--color-highlight) 100%
+  );
+
   a {
     color: white;
-  }
-
-  .center {
-    background-image: linear-gradient(
-      0deg,
-      rgb(255 255 255 / 0.07) 0%,
-      var(--color-highlight) 100%
-    );
   }
 }
 
@@ -143,7 +141,30 @@ footer {
 .line {
   display: flex;
   gap: 20px;
-  justify-content:
-    space-between;
+  justify-content: space-between;
   align-items: center;
 }
+
+.underline {
+  display: flex;
+  gap: 10px;
+  justify-content: right;
+  border-bottom: 1px solid white;
+  margin-bottom: 0;
+  padding: 0;
+}
+.light-mode .underline {
+  border-color: black;
+}
+.tab {
+  display: inline-block;
+  border: 1px solid white;
+  border-bottom: none;
+  padding: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.light-mode .tab {
+  border-color: black;
+}
+
