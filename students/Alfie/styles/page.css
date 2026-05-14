@@ -2,6 +2,14 @@
     box-sizing: border-box;
 }
 
+body {
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+header, footer, .tab, button {
+    transition: all 0.4s ease;
+}
+
 body.light-mode {
     background-color: white;
     color: black;
@@ -10,11 +18,24 @@ body.light-mode {
 body.light-mode footer {
     background-color: #f0f0f0;
     color: black;
+    border-radius: 15px;
+}
+
+.light-mode a {
+    color: #000000;
 }
 
 body.dark-mode {
     background-color: black;
     color: aliceblue;
+}
+
+body.dark-mode button {
+    background-color: #ff0000;
+}
+
+body.dark-mode main {
+    background-color:rgb(91, 89, 89) ;
 }
 
 
@@ -29,6 +50,7 @@ body.dark-mode b {
 body.dark-mode footer {
     background-color: rgb(167, 167, 167);
     color: rgb(255, 255, 255);
+    border-radius: 15px;
 }
 
 .poem {
@@ -44,13 +66,13 @@ body.dark-mode footer {
 
 button {
     padding: 12px 24px;
-    font-size: 15px;
+    font-size: 12px;
     font-weight: 600;
     border: none;
     border-radius: 50px;
     cursor: pointer;
 
-    background-color: #72a7dfaa;
+    background-color: #505b67aa;
     color: white;
 
     transition: all 0.3s ease;
@@ -113,3 +135,12 @@ button:active {
 .light-mode .tab {
     border-color: black;
 }
+
+main {
+    min-height: 50vh;
+    background-color: #fed6d65c;
+    border-radius: 15px;
+    margin: 30px;
+}
+
+
