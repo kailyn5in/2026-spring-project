@@ -22,10 +22,10 @@ function shapes() {
     surface.moveTo(200, 50);
     surface.lineTo(150, 200);
     // Add a 7.
-    surface.moveTo(250,50);
-    surface.lineTo(350,50);
-    surface.moveTo(350,50);
-    surface.lineTo(310,300);
+    surface.moveTo(250, 50);
+    surface.lineTo(350, 50);
+    surface.moveTo(350, 50);
+    surface.lineTo(310, 300);
     surface.closePath();
     surface.stroke();
 }
@@ -38,3 +38,29 @@ function cleanCanvas() {
     surface.clearRect(0, 0, 400, 400);
 }
 cleanButton.addEventListener("click", cleanCanvas);
+
+/*
+ * Graffiti
+ */
+
+let oldX = 0;
+let oldY = 0;
+
+function graffiti(event) {
+    console.log(event);
+    const x = event.offsetX;
+    const y = event.offsetY;
+    console.log(x, y, event.buttons);
+
+    if (event.buttons === 1) {
+        surface.beginPath();
+        surface.moveTo(oldX, oldY);
+        surface.lineTo(x, y);
+        surface.closePath();
+        surface.stroke();
+        oldX = x;
+        oldY = y;
+    } 
+
+}
+graffitiCanvas.addEventListener("mousemove", graffiti);
