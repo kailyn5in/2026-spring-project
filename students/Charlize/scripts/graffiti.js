@@ -8,13 +8,33 @@ const surface = graffitiCanvas.getContext("2d")
 
 const cleanButton = document.getElementById("clean")
 
+const colorInput = document.getElementById("color-input")
+
+const sizeInput = document.getElementById("size-input")
+
 console.log(graffitiCanvas);
 
 /*sty;e*/
-surface.lineWidth = 13;
+function changeSize(){
+surface.lineWidth = sizeInput.value;
+}
+changeSize();
+sizeInput.addEventListener("change", changeSize);
+
 surface.lineJoin = "round";
-surface.strokeStyle = "red";
+
+function changeColor(){
+surface.strokeStyle = colorInput.value;
+}
+changeColor();
+colorInput.addEventListener("change", changeColor);
+
+console.log(colorInput.value);
+
+
 surface.beginPath();
+
+
 surface.moveTo(200, 50);
 surface.lineTo(150, 200);
 surface.closePath();
