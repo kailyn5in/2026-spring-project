@@ -141,8 +141,9 @@ main {
 }
 .input{
    margin:10px ;
- display: grid;
+ display:grid;
 }
+
 
 #calculator {
   background-color: rgb(101, 101, 101);
