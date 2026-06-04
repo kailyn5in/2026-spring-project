@@ -3,7 +3,7 @@
 
 <head>
     <link rel="stylesheet" href="./styles/page.css">
-     <link rel="stylesheet" href="./styles/dog.css">
+    <link rel="stylesheet" href="./styles/dog.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -45,20 +45,28 @@
         </div>
         <ul class="center underline">
             <li class="tab"> <a href="coding.html">About My Website</a></li>
-             <li class="tab"> <a href="calculator.html">Calculator</a></li>
-              <li class="tab"> <a href="graffiti.html">Graffiti</a></li>
+            <li class="tab"> <a href="calculator.html">Calculator</a></li>
+            <li class="tab"> <a href="graffiti.html">Graffiti</a></li>
         </ul>
     </header>
     <main class="center">
         <h1>Graffiti</h1>
- <div class="dog-picture">
+        <div>
+           
             <div class="art-frame">
                 <img class="art" src="./images/Dog picture/Lucy (2).png" width="200">
                 <canvas id="my-graffiti" width="400" height="400">
 
                 </canvas>
+                
             </div>
-            <button class="input" id="clean">Clean graffiti</button>
+             <label class="input">
+                Tool:
+                <select id="tool-select">
+                    <option value="eraser">Eraser</option>
+                    <option value="pen">Pen</option>
+                </select>
+            </label>
             <label class="input">
                 Color:
                 <input type="color" value="#000000" id="color-input">
