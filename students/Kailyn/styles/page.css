@@ -143,3 +143,57 @@ main {
    margin:10px ;
  display: grid;
 }
+
+#calculator {
+  background-color: rgb(101, 101, 101);
+  padding: 20px;
+  border: 2px solid rgb(255, 255, 255);
+  display: inline-block;
+  height:500px;
+  margin:20px;
+
+}
+
+#counter {
+  color: black;
+  background-color: rgb(243, 196, 122);
+  padding: 20px;
+  border: 2px solid black;
+  font-family: "BJ Cree", serif;
+  font-family: "Bitcount Grid Double", system-ui;
+  font-family: "Saira Stencil", sans-serif;
+  font-family: "Sekuya", system-ui;
+
+  
+  
+  
+}
+
+#calculator-buttons {
+  background-color: rgb(251, 233, 205);
+  padding: 20px;
+  border: 5px solid black;
+  
+  height: 350px;
+  border-width: 10px;
+  border-radius: 5px;
+  
+}
+  #calculator-buttons button{
+  min-width:50px;
+  min-height:40px;
+  background-color:white ;
+  color:black;
+box-shadow: 0 0 0 0 rgb(97, 97, 97);
+font-size: 30px;
+border-radius: 50px;
+background-image: linear-gradient(to top, rgb(189, 202, 254), rgb(135, 67, 198));
+
+}
+
+
+ #equ-button{
+
+ width: 165px;
+ }
+
