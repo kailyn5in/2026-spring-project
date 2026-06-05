@@ -1,8 +1,9 @@
 <!doctype html>
 <html>
   <head>
-    <title>Mr. Wilkins: Coding</title>
+    <title>Calculator</title>
     <link rel="stylesheet" href="styles/page.css" />
+    <link rel="stylesheet" href="styles/counter.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -40,24 +41,44 @@
       </ul>
     </header>
     <main class="center">
-      <h1>Coding</h1>
-      <p>
-        Before creating this website, the students worked on these two projects:
-      </p>
-      <ul>
-        <li>
-          <a href="https://johnalbinwilkins.github.io/week1/">Week 1</a>
-        </li>
-        <li>
-          <a href="https://johnalbinwilkins.github.io/project2/">Project 2</a>
-        </li>
-      </ul>
+      <h1>Calculator</h1>
+
+      <div class="calc-styles">
+        <p id="calculator">0</p>
+        <div class="calc-buttons">
+          <div class="calc-reset">
+            <button id="calc-button-clear">C</button>
+            <button id="calc-button-plusone">+1</button>
+            <button id="calc-button-minusone">-1</button>
+          </div>
+          <div class="calc-operators">
+            <button id="calc-button-divide">÷</button>
+            <button id="calc-button-multiply">×</button>
+            <button id="calc-button-subtract">−</button>
+            <button id="calc-button-add">+</button>
+            <button id="calc-button-equal">=</button>
+          </div>
+          <div class="calc-entry">
+            <button id="calc-button-1">1</button>
+            <button id="calc-button-2">2</button>
+            <button id="calc-button-3">3</button>
+            <button id="calc-button-4">4</button>
+            <button id="calc-button-5">5</button>
+            <button id="calc-button-6">6</button>
+            <button id="calc-button-7">7</button>
+            <button id="calc-button-8">8</button>
+            <button id="calc-button-9">9</button>
+            <button id="calc-button-0">0</button>
+          </div>
+        </div>
+      </div>
     </main>
     <footer>
       <div class="center">
-        <p>2026 May 14</p>
+        <p>2026-06-04</p>
       </div>
     </footer>
     <script src="scripts/color-mode.js"></script>
+    <script src="scripts/counter.js"></script>
   </body>
 </html>
