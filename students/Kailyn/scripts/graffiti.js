@@ -3,28 +3,37 @@
  */
 let myGraffiti = document.getElementById("my-graffiti");
 let surface = myGraffiti.getContext("2d");
-let colorInput=document.getElementById("color-input");
-let sizeInput=document.getElementById("size-input");
-let toolSelect=document.getElementById("tool-select")
+let colorInput = document.getElementById("color-input");
+let sizeInput = document.getElementById("size-input");
+let toolSelect = document.getElementById("tool-select")
 console.log(toolSelect)
 /*
  *Graffiti style
  */
 
 surface.lineJoin = "round"
-function changeColor(){
-surface.strokeStyle = colorInput.value;
-console.log(colorInput.value)
+function changeColor() {
+    surface.strokeStyle = colorInput.value;
+    console.log(colorInput.value)
 };
 changeColor();
 colorInput.addEventListener("change", changeColor);
 
-function changeSize(){
-surface.lineWidth = sizeInput.value
-console.log(sizeInput.value)
+function changeSize() {
+    surface.lineWidth = sizeInput.value
+    console.log(sizeInput.value)
 };
 changeSize();
 sizeInput.addEventListener("change", changeSize);
+
+let tool;
+function changeTool() {
+    tool = toolSelect.value;
+
+}
+changeTool();
+toolSelect.addEventListener("change", changeTool)
+
 
 /*
  *shapes
@@ -63,16 +72,26 @@ function graffiti(event) {
     const x = event.offsetX;
     const y = event.offsetY;
     console.log(x, y, event.buttons);
-if(event.buttons === 1){
-        surface.beginPath();
-    surface.moveTo(oldX,oldY);
-    surface.lineTo(x, y);
-    surface.closePath();
-    surface.stroke();
+    if (event.buttons === 1) {
+        if (tool === "eraser") {
+            let width = sizeInput.value
+            surface.clearRect(x, y, width, width)
+        } else {
+            {
+                surface.beginPath();
+                surface.moveTo(oldX, oldY);
+                surface.lineTo(x, y);
+                surface.closePath();
+                surface.stroke();
+            }
+        }
     }
+
     oldX = x;
     oldY = y;
+
 }
 
 
 myGraffiti.addEventListener("mousemove", graffiti);
+

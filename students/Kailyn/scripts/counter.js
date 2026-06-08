@@ -34,18 +34,21 @@ function show(val) {
 }
 function minus() {
     memory = number;
+     console.log(memory)
     number = 0;
     mibut = true;
     plbut = multbut = divbut = false;
 }
 function plus() {
     memory = number;
+     console.log(memory)
     number = 0;
     plbut = true;
     mibut = multbut = divbut = false;
 }
     function multiply() {
         memory = number;
+         console.log(memory)
         number = 0;
         multbut = true;
         plbut = mibut = divbut = false;
@@ -53,6 +56,7 @@ function plus() {
     }
     function divide() {
         memory = number;
+        console.log(memory)
         number = 0;
         divbut = true;
         plbut = mibut = multbut = false;
@@ -164,6 +168,7 @@ if(event.key === "8")eight();
 if(event.key === "9")nine();
 if(event.key === "+")plus();
 if(event.key === "Enter")equal();
+if(event.key === "=")equal();
 if(event.key === "-")minus();
 if(event.key === "*")multiply();
 if(event.key === "/")divide();

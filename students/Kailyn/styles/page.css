@@ -142,17 +142,15 @@ main {
 .input{
    margin:10px ;
    padding:10px;
-  float: inline-block;
-  display:block table;
+  display:grid;
   
 }
-
 
 #calculator {
   background-color: rgb(101, 101, 101);
   padding: 20px;
   border: 2px solid rgb(255, 255, 255);
-  display: inline-end;
+  display: inline-block;
   height:500px;
   margin:20px;
 
@@ -170,7 +168,6 @@ main {
 
   
   
-  
 }
 
 #calculator-buttons {
@@ -181,7 +178,6 @@ main {
   height: 350px;
   border-width: 10px;
   border-radius: 5px;
-  
 }
   #calculator-buttons button{
   min-width:50px;
@@ -192,7 +188,6 @@ box-shadow: 0 0 0 0 rgb(97, 97, 97);
 font-size: 30px;
 border-radius: 50px;
 background-image: linear-gradient(to top, rgb(189, 202, 254), rgb(135, 67, 198));
-
 }
 
 
@@ -201,3 +196,6 @@ background-image: linear-gradient(to top, rgb(189, 202, 254), rgb(135, 67, 198))
  width: 165px;
  }
 
+.others{
+  font-size:larger;
+}
