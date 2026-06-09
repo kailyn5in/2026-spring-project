@@ -1,5 +1,7 @@
 * {
   box-sizing: border-box;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
 }
 
 body {
@@ -11,6 +13,7 @@ body {
   font-family: "Saira Stencil", sans-serif;
   font-family: "Sekuya", system-ui;
   font-family: "Cause", cursive;
+ 
 }
 
 
@@ -33,6 +36,22 @@ button {
   border:2px solid black;
   box-shadow: 10px 5px 5px 0 rgb(212, 212, 212);
 
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+
+}
+
+button:hover {
+  background-color: #6fc5ff;
+  box-shadow: 0 0 20px #6fc5ff50;
+  transform: scale(1.1);
+}
+button:active {
+  background-color: #3d94cf;
+  transition: all 0.25s;
+  -webkit-transition: all 0.25s;
+  box-shadow: none;
+  transform: scale(0.98);
 }
 
 .light-mode button {
@@ -42,6 +61,18 @@ button {
   box-shadow: 10px 5px 5px 0 rgb(0, 0, 0);
 }
 
+.light-mode button:hover {
+  background-color: #c53cbc;
+  box-shadow: 0 0 20px #6fc5ff50;
+  transform: scale(1.1);
+}
+.light-mode button:active {
+  background-color: #c53cbc;
+  transition: all 0.25s;
+  -webkit-transition: all 0.25s;
+  box-shadow: none;
+  transform: scale(0.98);
+}
 .light-mode {
   padding: 20px;
   background-image: linear-gradient(to top, rgb(184, 190, 249), rgb(199, 138, 232));
@@ -188,6 +219,7 @@ box-shadow: 0 0 0 0 rgb(97, 97, 97);
 font-size: 30px;
 border-radius: 50px;
 background-image: linear-gradient(to top, rgb(189, 202, 254), rgb(135, 67, 198));
+
 }
 
 
@@ -198,4 +230,10 @@ background-image: linear-gradient(to top, rgb(189, 202, 254), rgb(135, 67, 198))
 
 .others{
   font-size:larger;
+}
+
+.Table{
+  border:1px solid rgb(121, 121, 121);
+   text-align: left;
+  padding: 8px;
 }

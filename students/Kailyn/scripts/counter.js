@@ -167,7 +167,6 @@ if(event.key === "7")seven();
 if(event.key === "8")eight();
 if(event.key === "9")nine();
 if(event.key === "+")plus();
-if(event.key === "Enter")equal();
 if(event.key === "=")equal();
 if(event.key === "-")minus();
 if(event.key === "*")multiply();
