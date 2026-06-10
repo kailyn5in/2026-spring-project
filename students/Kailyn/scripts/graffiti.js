@@ -73,10 +73,15 @@ function graffiti(event) {
     const y = event.offsetY;
     console.log(x, y, event.buttons);
     if (event.buttons === 1) {
-        if (tool === "eraser") {
-            let width = sizeInput.value
-            surface.clearRect(x, y, width, width)
-        } else {
+       if (tool === "eraser") {
+    let width = sizeInput.value / 2; 
+    surface.save(); 
+    surface.beginPath();
+    surface.arc(x, y, width, 0, Math.PI * 2); 
+    surface.clip(); 
+    surface.clearRect(x - width, y - width, width * 2, width * 2); 
+    surface.restore(); 
+} else {
             {
                 surface.beginPath();
                 surface.moveTo(oldX, oldY);
