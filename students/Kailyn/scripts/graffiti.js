@@ -74,13 +74,8 @@ function graffiti(event) {
     console.log(x, y, event.buttons);
     if (event.buttons === 1) {
        if (tool === "eraser") {
-    let width = sizeInput.value / 2; 
-    surface.save(); 
-    surface.beginPath();
-    surface.arc(x, y, width, 0, Math.PI * 2); 
-    surface.clip(); 
-    surface.clearRect(x - width, y - width, width * 2, width * 2); 
-    surface.restore(); 
+    let width = sizeInput.value; 
+    surface.clearRect(x - (width / 2), y - (width / 2), width, width);
 } else {
             {
                 surface.beginPath();
