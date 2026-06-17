@@ -236,3 +236,8 @@ background-image: linear-gradient(to top, rgb(189, 202, 254), rgb(135, 67, 198))
    text-align: left;
   padding: 8px;
 }
+.fi{
+   float: right;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}

@@ -1,3 +1,6 @@
+import { CanvasEraser } from "../../../scripts/canvas-eraser.js";
+
+
 /*
  *HTML elements
  */
@@ -6,7 +9,7 @@ let surface = myGraffiti.getContext("2d");
 let colorInput = document.getElementById("color-input");
 let sizeInput = document.getElementById("size-input");
 let toolSelect = document.getElementById("tool-select")
-console.log(toolSelect)
+let eraser = new CanvasEraser(surface);
 /*
  *Graffiti style
  */
@@ -14,14 +17,12 @@ console.log(toolSelect)
 surface.lineJoin = "round"
 function changeColor() {
     surface.strokeStyle = colorInput.value;
-    console.log(colorInput.value)
 };
 changeColor();
 colorInput.addEventListener("change", changeColor);
 
 function changeSize() {
     surface.lineWidth = sizeInput.value
-    console.log(sizeInput.value)
 };
 changeSize();
 sizeInput.addEventListener("change", changeSize);
@@ -71,11 +72,12 @@ let oldY = 0;
 function graffiti(event) {
     const x = event.offsetX;
     const y = event.offsetY;
-    console.log(x, y, event.buttons);
+    
     if (event.buttons === 1) {
        if (tool === "eraser") {
-    let width = sizeInput.value; 
-    surface.clearRect(x - (width / 2), y - (width / 2), width, width);
+    let radius = sizeInput.value/2; 
+    eraser.circle(x,y,radius);
+    
 } else {
             {
                 surface.beginPath();
