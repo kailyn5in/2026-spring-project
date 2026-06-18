@@ -1,9 +1,11 @@
 import { CanvasEraser } from "../../../scripts/canvas-eraser.js";
-
+import { StickyClickyImage } from "../../../scripts/sticky-clicky-image.js";
 
 /*
  *HTML elements
  */
+let stickyMustache= new StickyClickyImage('mustache');
+stickyMustache.setContainerID('dog-picture')
 let myGraffiti = document.getElementById("my-graffiti");
 let surface = myGraffiti.getContext("2d");
 let colorInput = document.getElementById("color-input");
