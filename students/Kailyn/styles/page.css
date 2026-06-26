@@ -266,3 +266,23 @@ font-weight: blod;
 .light-mode figure{
 border:2px dotted rgb(0, 0, 0);
 }
+
+.LLLucy{
+  
+  flex-wrap: wrap; /* 自動換行 */
+  gap: px;
+  justify-content: center; /* 水平置中 */
+  margin:0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border:2px dotted rgb(241, 241, 241);
+  padding:5px;
+}
+.LLLucy img {
+  width: 30%; /* 每列大約三張 */
+  height: auto;
+}
+summary{
+  font-size:24px;
+  font-weight:bold;
+}
